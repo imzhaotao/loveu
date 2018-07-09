@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>baby love u</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.js"></script>
+    <style>
+        .baby {
+            line-height: 80px;
+            text-align: center;
+            font-size: 40px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-md-12 baby">
+        宝宝你是猪吗
+    </div>
+    <button class="col-md-6 btn btn-success yes go">是</button>
+    <button class="col-md-6 btn btn-danger no go">不是</button>
+    <button style="display: none" class="col-md-12 btn btn-success again  come">再点一下有惊喜</button>
+    <img style="display: none" src="img/11.jpg" alt="">
+    <script>
+        $('.yes').on('click', function () {
+            alert('哈哈哈哈我就不信你会忍得住不点这个');
+            $('.go').hide();
+            $('.come').show();
+            $('.baby').text('宝宝我爱你');
+        })
+        $('.come').on('click',function(){
+            $('img').show();
+            $('.come').hide();
+        })
+        var i = 1;
+        $(".no").click(function () {
+            switch (i) {
+                case 1:
+                    alert("你摸着良心说话");
+                    break;
+                case 2:
+                    alert("不可能");
+                    break;
+                default:
+                    alert("你就是猪");
+            }
+            i++;
+        });
+    </script>
+</body>
+
+</html>
