@@ -23,7 +23,7 @@
 
 <body>
     <div class="col-md-12 baby">
-        宝宝你是猪吗
+        你是猪吗
     </div>
     <button class="col-md-6 btn btn-success yes go">是</button>
     <button class="col-md-6 btn btn-danger no go">不是</button>
@@ -36,12 +36,13 @@
             $('.come').show();
         })
         $('.come').on('click',function(){
-            $('img').show();
             $('.come').hide();
+                $('.baby').text('骚等一秒钟...');
             setTimeout(() => {
-                $('.baby').text('还说不是猪哈哈哈哈');
+            $('img').show();
+                $('.baby').text('还说不是猪哈哈哈');
                 alert('有个屁的惊喜哈哈哈哈哈');
-            }, 500);
+            }, 1500);
         })
         var i = 1;
         $(".no").click(function () {
